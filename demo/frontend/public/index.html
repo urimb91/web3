@@ -3,165 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Berries Calling | Professional Call Center Solutions</title>
+  <title>Berries Calling | Web3 Call Center</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
-
-    header {
-      background-color: #240046;
-      color: white;
-      padding: 20px 0;
-    }
-
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 50px;
-      margin-right: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .lang-switcher {
-      background: #fff;
-      color: #240046;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-weight: 500;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #3C096C, #5A189A);
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .cta-button {
-      background: #ff4d6d;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      margin-top: 30px;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .features h2,
-    .about h2,
-    .services h2,
-    .contact h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .feature-grid,
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .feature-card,
-    .service-card {
-      background: #f8f8f8;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .contact-form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .contact-form button {
-      background-color: #5A189A;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #240046;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="logo.png" alt="Berries Calling Logo">
+        <img src="/logo.png" alt="Berries Calling Logo" height="50">
         <strong>Berries Calling</strong>
       </div>
       <nav>
@@ -172,50 +23,29 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <select class="lang-switcher">
-        <option value="en">EN</option>
-        <option value="nl">NL</option>
-        <option value="es">ES</option>
-      </select>
     </div>
   </header>
-<button onclick="initiatePayment()">Pay with Pi</button>
 
   <section class="hero">
     <h1>Experts in Call Center Solutions</h1>
-    <p>Partner with Berries Calling for inbound & outbound support, telemarketing and technical assistance — tailored to your needs.</p>
-    <a href="#contact" class="cta-button">Contact Us</a>
+    <p>Partner with Berries Calling for multilingual inbound & outbound services — powered by Web3 technology.</p>
+    <button onclick="connectToPi()">Connect to Pi</button>
+    <button onclick="initiatePayment()">Pay with Pi</button>
   </section>
 
   <section class="about" id="about">
     <h2>About Us</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">Berries Calling is a leading call center specializing in multilingual communication services for businesses of all sizes. Our experienced team provides excellent customer interaction solutions with a focus on professionalism, empathy, and results.</p>
+    <p>Berries Calling is a next-gen call center that combines professional voice services with Web3 payments via Pi Network.</p>
   </section>
 
   <section class="services" id="services">
     <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Inbound Call Handling</h3>
-        <p>We manage all incoming calls with professionalism, enhancing your customer satisfaction.</p>
-      </div>
-      <div class="service-card">
-        <h3>Outbound Call Campaigns</h3>
-        <p>Our team conducts outbound sales, surveys, and lead qualification campaigns with precision.</p>
-      </div>
-      <div class="service-card">
-        <h3>Customer Support</h3>
-        <p>24/7 multilingual support for your products and services, customized to your business needs.</p>
-      </div>
-      <div class="service-card">
-        <h3>Telemarketing</h3>
-        <p>We connect with potential clients to generate interest and set appointments for your sales team.</p>
-      </div>
-      <div class="service-card">
-        <h3>Technical Support</h3>
-        <p>Efficient and reliable troubleshooting and issue resolution for both software and hardware.</p>
-      </div>
-    </div>
+    <ul>
+      <li>Inbound & Outbound Call Handling</li>
+      <li>Customer & Technical Support</li>
+      <li>Telemarketing & Lead Generation</li>
+      <li>Multilingual Agents</li>
+    </ul>
   </section>
 
   <section class="contact" id="contact">
@@ -231,73 +61,44 @@
   <footer>
     <p>&copy; 2025 Berries Calling. All rights reserved.</p>
   </footer>
-<head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+  <script>
+    Pi.init({ version: "2.0", sandbox: true });
 
-    <script>
-      // Hacking react-scripts method for defining environment variables because we want to be able to
-      // pass them at runtime when the container starts, instead of having to build the frontend once for
-      // each environment (e.g staging / production).
-      //
-      // This will be automatically templated:
-      // - in DEV, by react-scripts (see https://create-react-app.dev/docs/adding-custom-environment-variables/)
-      // - in PROD, by the container's entrypoint script found in docker/entrypoint.sh (this enables passing the
-      //   variables at runtime instead of consuming it at build time and building a non-portable container)
-      window.__ENV = {
-        backendURL: "%REACT_APP_BACKEND_URL%",
-        sandbox: "%REACT_APP_SANDBOX_SDK%",
-      }
-    </script>
+    function connectToPi() {
+      Pi.authenticate(['username'], function(piUser) {
+        console.log('Authenticated user:', piUser);
+      });
+    }
 
-    <!-- Import the Pi Network App Platform SDK: -->
-    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
-    
-    <!-- TODO make sandbox conditional to env (dev / prod) -->
-    <script>
-      // Make the decision whether Pi SDK should run in "Sandbox" mode or "Pi Browser" mode based on the
-      // dedicated environment variable:
-      var runSDKInSandboxMode = window.__ENV.sandbox === "true"; // treat env vars as strings, not booleans
-      
-      // Init Pi SDK:
-      Pi.init({ version: "2.0", sandbox: runSDKInSandboxMode });
-    </script>
-    
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    function initiatePayment() {
+      Pi.createPayment({
+        amount: 3.14,
+        memo: "Call center payment",
+        metadata: { service: "customer_support" }
+      }, {
+        onReadyForServerApproval: function (paymentId) {
+          fetch('/approve', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ paymentId })
+          });
+        },
+        onReadyForServerCompletion: function (paymentId, txid) {
+          fetch('/complete', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ paymentId, txid })
+          });
+        },
+        onCancel: function () {
+          console.log("Payment cancelled");
+        },
+        onError: function (err) {
+          console.error("Payment error:", err);
+        }
+      });
+    }
+  </script>
 </body>
 </html>
