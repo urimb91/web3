@@ -23,3 +23,43 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
+function initiatePayment() {
+  const paymentData = {
+    amount: 3.14,
+    memo: "Call center service payment",
+    metadata: { service: "customer_support" }
+  };
+
+  const paymentCallbacks = {
+    onReadyForServerApproval: function(paymentId) {
+      // Send paymentId to your server for approval
+      fetch("/approve", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ paymentId })
+      });
+    },
+    onReadyForServerCompletion: function(paymentId, txid) {
+      // Notify your server to complete the payment
+      fetch("/complete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ paymentId, txid })
+      });
+    },
+    onCancel: function(paymentId) {
+      console.log("Payment cancelled:", paymentId);
+    },
+    onError: function(error, payment) {
+      console.error("Payment error:", error);
+    }
+  };
+
+  Pi.createPayment(paymentData, paymentCallbacks)
+    .then(function(payment) {
+      console.log("Payment initiated:", payment);
+    })
+    .catch(function(error) {
+      console.error("Payment initiation error:", error);
+    });
+}
